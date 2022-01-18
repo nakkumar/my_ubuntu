@@ -1,0 +1,46 @@
+xrandr
+
+cvt 1920 1080
+
+xrandr --newmode    --> past the above line
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+xrandr --addmode eDP-1 (resolution)
+xrandr --addmode eDP-1 "1920x1080_60.00"
+
+
+
+--> edit the file and add the following line in the bottom of the file for permanent resolution.
+
+
+gedit ~/.profile  
+
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+xrandr --addmode eDP-1 "1920x1080_60.00"
+
+
+
+like:
+******
+
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_60.00"
