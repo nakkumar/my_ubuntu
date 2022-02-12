@@ -15,9 +15,14 @@ xrandr --addmode eDP-1 "1920x1080_60.00"
 
 gedit ~/.profile  
 
-xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+xrandr --newmode "1648x924_60.00"  125.00  1648 1744 1912 2176  924 927 937 959 -hsync +vsync
+xrandr --addmode eDP-1 "1648x924_60.00"
 
+
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 xrandr --addmode eDP-1 "1920x1080_60.00"
+
+
 
 
 
